@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script lists files, trimming everything before the first dash if it exists
+
+for file in *; do
+  [[ "$file" == .* ]] && continue
+  echo "${file#*-}"
+done
